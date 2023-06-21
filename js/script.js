@@ -1,13 +1,13 @@
 const generateBtn = document.querySelector(".meme-generator .meme-btn");
 
 const image  = document.querySelector(".meme-generator img");
-const title  = document.querySelector(".meme-generator .title");
-const author = document.querySelector(".meme-generator .meme-author");
+const mTitle  = document.querySelector(".meme-generator .title");
+const mAuthor = document.querySelector(".meme-generator .meme-author");
 
 const updateDetails = (url, title, author) => {
     image.setAttribute("src", url); 
-    title.innerHTML  = title;
-    author.innerHTML = `Meme by: ${author}`;
+    mTitle.innerHTML  = title;
+    mAuthor.innerHTML = `Meme by: ${author}`;
 }
 
 const generateMeme = () => {

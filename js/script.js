@@ -4,8 +4,10 @@ const image  = document.querySelector(".meme-generator img");
 const title  = document.querySelector(".meme-generator .title");
 const author = document.querySelector(".meme-generator .meme-author");
 
-const updateDetails = () => {
-    image.setAttribute(""); 
+const updateDetails = (url, title, author) => {
+    image.setAttribute("src", url); 
+    title.innerHTML  = title;
+    author.innerHTML = `Meme by: ${author}`;
 }
 
 const generateMeme = () => {
@@ -18,4 +20,4 @@ const generateMeme = () => {
 
 generateBtn.addEventListener("click", generateMeme);
 
-
+generateMeme();
